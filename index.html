@@ -26,9 +26,8 @@
                 </br>
                     <li>There are four crystals  below. By clicking on a crystal you will add a specific amount of points to your score..</li>
                 </br>
-                    <li>You win the game by matching your total score to the random number.</li>
-                </br>
-                    <li>You lose the game if your total score goes above the random number.</li>
+                    <li>You win the game by matching your total score to the random number.
+                        You lose the game if your total score goes above the random number.</li>
                 </br>
                     <li>The value of each crystal is hidden from you until you click on it.</li>
                 </br>
@@ -40,35 +39,32 @@
 
             <div class="score-container">
             <div class="row">
-                 <div id="a1" class="col-md-3"> 
-                        <p>aaa</p>
-                        <div id="random"></div>
-                    </div>
+                 <div id="randomNumber" class="col-md-3">  </div>
                     
                     <div id="b2" class="col-md-2">
                            Wins:<div id="wins"> </div>
-                            Losses:<div id="Losses"></div> 
+                            Losses:<div id="losses"></div> 
                     </div>
             </div>
             <div class="crystal">
-                   
-                <img src="assets/images/red.jpn.png" class=gemImage id= "col" alt="Red Gem"> 
-                <img src="assets/images/blue.jpn.png" class=gemImage id="col" alt="Blue Gem">
-                <img src="assets/images/yellow.jpn.png" class=gemImage id= "col" alt="Yellow Gem">
-                <img src="assets/images/green.jpn.png" class=gemImage id="col" alt="Green Gem">  
+                    <div class="buttons">
+                <img src="assets/images/red.jpn.png" class=gemImage id= "red" value="10" alt="Red Gem"> 
+                <img src="assets/images/blue.jpn.png" class=gemImage id="blue" alt="Blue Gem">
+                <img src="assets/images/yellow.jpn.png" class=gemImage id= "yellow" alt="Yellow Gem">
+                <img src="assets/images/green.jpn.png" class=gemImage id="green" alt="Green Gem"> 
+                </div> 
             </div>
                 <div id="row2"class="row">
-                    <div id="c1" class="col-md-3"> 
+                    <div id="userTotal" class="col-md-3"> 
                         <h4> Your total score is:</h4>
                     </div>
                     </div>
                     <div id="row3"class="row">
-                        <div id="c2" class="col-md-3"> 
-                            <h4> score:</h4>
+                        <div id="score" class="col-md-3">
                         </div>     
                     </div>
 </div>
-
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
  <script text="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
