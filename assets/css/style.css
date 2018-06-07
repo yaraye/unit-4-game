@@ -1,7 +1,7 @@
 body{
-    background:gainsboro; 
+    
     font-family: 'Lobster', cursive; 
-    background-image: url("../images/background.jpn.png")
+    background-image: url("../images/white-crystal.jpn.jpg");
 }
 .container{
     display: block;
@@ -11,8 +11,6 @@ body{
     margin-left: 15%;
     margin-top: 5%;
     margin-bottom: 5%;
-    border: 3px solid black;
-    background-image: url("../images/white-crystal.jpn.jpg")
 }
 .main-container {
     margin-right: 2%;
@@ -31,44 +29,43 @@ h1{
 }
 .instructions{
     display: block;
-    background: rgb(250, 250, 199);
-    border: 1px solid lightgoldenrodyellow;
+    
     width: 500px;
     margin-bottom: 1%;
     color: black;
     font-size: 18px;
-    background-image: url("../images/stock-illustration.jpn.jpg");
+   
 }
 
 #randomNumber{
-    background:  lightgreen;
+    
     display: block;
     width: 200px;
     padding: 2%; 
     margin-right: 1%;
     font-size: 44px;
-    background-image: url("../images/crystalback.jpn.jpg");
+
     text-align: center;    
 }
 
 #win-loss{
-    background: turquoise;
+
     display: block;
     padding: 3%;
     width: 110px;
-    background-image: url("../images/crystalback.jpn.jpg");
+  
 }
 
 
 #userTotal,
 #score{
     display: grid;
-    background: #4aaaa5;
+  
     margin-bottom: 1%;
     width: 200px;
     color:black;
     font-size: 25px;
-    background-image: url("../images/crystalback.jpn.jpg");
+   
 }
 
 #score{
