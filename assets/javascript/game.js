@@ -5,17 +5,34 @@ var losses=0;
 var totalScore=0;
 var score=0;
 var playersGuess="";
+userTotal = 0;
+
 //assign to html
 $("#wins").html(wins);
 $('#losses').html(losses);
 $('#score').html(score);
 $('#userTotal1').html(userTotal);
 
+function reset()
+{
+    var randomeNumber = Math.floor(Math.random() * 101) + 19;
+   // console.log (randomeNumber);
+    $('#randomNumber').html(randomeNumber);
+
+//The player will have to guess the answer. This time, though, the player will guess with numbers instead of letters. 
+//Each crystal should have a random hidden value between 1 - 12.
+    var cry1 = Math.floor(Math.random() * 11) + 1;
+    var cry2 = Math.floor(Math.random() * 11) + 1;
+    var cry3 = Math.floor(Math.random() * 11) + 1;
+    var cry4 = Math.floor(Math.random() * 11) + 1;
+    userTotal=0;
+}
+
 
 //The random number shown at the start of the game should be between 19 - 120.
 
     var randomeNumber = Math.floor(Math.random() * 101) + 19;
-    console.log (randomeNumber);
+    //console.log (randomeNumber);
     $('#randomNumber').html(randomeNumber);
 
 //The player will have to guess the answer. This time, though, the player will guess with numbers instead of letters. 
@@ -25,21 +42,7 @@ $('#userTotal1').html(userTotal);
     var cry3 = Math.floor(Math.random() * 11) + 1;
     var cry4 = Math.floor(Math.random() * 11) + 1;
 
-    function reset()
-    {
-        var randomeNumber = Math.floor(Math.random() * 101) + 19;
-        console.log (randomeNumber);
-        $('#randomNumber').html(randomeNumber);
-    
-    //The player will have to guess the answer. This time, though, the player will guess with numbers instead of letters. 
-    //Each crystal should have a random hidden value between 1 - 12.
-        var cry1 = Math.floor(Math.random() * 11) + 1;
-        var cry2 = Math.floor(Math.random() * 11) + 1;
-        var cry3 = Math.floor(Math.random() * 11) + 1;
-        var cry4 = Math.floor(Math.random() * 11) + 1;
-        userTotal=0;
-    
-    }
+
     
 //There will be four crystals displayed as buttons on the page.
 $('#red').on ('click', function(){
@@ -117,8 +120,7 @@ $('#red').on ('click', function(){
 
     
 //When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-userTotal = score + cry1;
-console.log(userTotal);
+
 
 //Your game will hide this amount until the player clicks a crystal.
 //When they do click one, update the player's score counter.
