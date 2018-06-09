@@ -42,78 +42,46 @@ $('#randomNumber').html(randomeNumber);
 
 //The random number shown at the start of the game should be between 19 - 120.
 
+function CalculateGame(userTotal)
+{
+    $('#score').html(userTotal); 
+    //sets win/lose conditions
+  if (userTotal ==randomeNumber){
+     
+      wins++; 
+      $('#wins').html(wins);
+      reset();
+  }
+  else if ( userTotal > randomeNumber){
+      losses++; 
+      $('#losses').html(losses);
+      reset();
+  }
+
+}
+
     
 //There will be four crystals displayed as buttons on the page.
 $('#red').on ('click', function(){
     userTotal = userTotal + cry1;
-    console.log(cry1);
-    $('#score').html(userTotal); 
-          //sets win/lose conditions
-        if (userTotal ==randomeNumber){
-           
-            wins++; 
-            $('#wins').html(wins);
-            reset();
-        }
-        else if ( userTotal > randomeNumber){
-            losses++; 
-            $('#losses').html(losses);
-            reset();
-        }   
+   CalculateGame(userTotal);
+         
   })  
   $('#blue').on ('click', function(){
     userTotal = userTotal + cry2;
     console.log(cry2);
-    $('#score').html(userTotal); 
-          //sets win/lose conditions
-        if (userTotal == randomeNumber){
-           
-            wins++; 
-            $('#wins').html(wins);
-            reset();
-        }
-        else if ( userTotal > randomeNumber){
-            losses++; 
-            $('#losses').html(losses);
-            reset();
-        }   
+    CalculateGame(userTotal);
+         
   })  
   $('#yellow').on ('click', function(){
     userTotal = userTotal + cry3;
-    console.log(cry3);
-    $('#score').html(userTotal); 
-          //sets win/lose conditions
-        if (userTotal == randomeNumber){
-          
-          wins++; 
-        $('#wins').html(wins);
-        reset();
-
-        }
-        else if ( userTotal > randomeNumber){
+    CalculateGame(userTotal);
          
-          losses++; 
-          $('#losses').html(losses);
-          reset();
-  
-        }   
   })
   $('#green').on ('click', function(){
     userTotal = userTotal + cry4;
-    console.log(cry4);
-    $('#score').html(userTotal); 
-          //sets win/lose conditions
-        if (userTotal == randomeNumber){
-           
-            wins++; 
-            $('#wins').html(wins);
-            reset();
-        }
-        else if ( userTotal > randomeNumber){
-            losses++; 
-            $('#losses').html(losses);
-            reset();
-        }   
+    CalculateGame(userTotal);
+         
   })    
 
 })
